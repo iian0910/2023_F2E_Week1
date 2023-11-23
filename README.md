@@ -1,24 +1,17 @@
 # 2023_f2e_1
 
-## Project setup
+### 描述
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+參與六角學院 2023 F2E 第一周活動
 ```
 
-### Compiles and minifies for production
+### 使用技術
 ```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
+Vue2.js
+Bootstrap 5
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 設計 UI 線稿出處
+```
+[Figma / 作者：jhan](https://www.figma.com/file/DCnuTZQ00D5VHiDkBLhxQ3/2023-The-F2E-%E7%AB%8B%E5%A7%94%E7%AB%B6%E9%81%B8%E5%AE%98%E7%B6%B2?type=design&node-id=139-170&mode=design&t=sfGcnGoYzte76Kq4-0)
+```

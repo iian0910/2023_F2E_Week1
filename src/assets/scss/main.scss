@@ -3,6 +3,13 @@
 @import "./helpers/variables";      //複製一份客製化
 @import "~bootstrap/scss/bootstrap";
 
+@font-face {
+  font-family: 'Mantou';
+  src: url('@/assets/font/MantouSans-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 h1 {
   font-size: 40px;
   @media screen and (max-width: 576px){
@@ -58,6 +65,7 @@ h6 {
   }
 }
 .large_text {
+  font-family: Mantou;
   font-size: 64px;
   @media screen and (max-width: 576px){
     font-size: 52px;

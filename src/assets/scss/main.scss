@@ -2,3 +2,64 @@
 @import "~bootstrap/scss/functions";
 @import "./helpers/variables";      //複製一份客製化
 @import "~bootstrap/scss/bootstrap";
+
+h1 {
+  font-size: 40px;
+  @media screen and (max-width: 576px){
+    font-size: 32px;
+  }
+}
+h2 {
+  font-size: 32px;
+  @media screen and (max-width: 576px){
+    font-size: 24px;
+  }
+}
+h3 {
+  font-size: 28px;
+  @media screen and (max-width: 576px){
+    font-size: 24px;
+  }
+}
+h4 {
+  font-size: 24px;
+  @media screen and (max-width: 576px){
+    font-size: 24px;
+  }
+}
+h5 {
+  font-size: 20px;
+  @media screen and (max-width: 576px){
+    font-size: 20px;
+  }
+}
+h6 {
+  font-size: 16px;
+  @media screen and (max-width: 576px){
+    font-size: 16px;
+  }
+}
+.base_text {
+  font-size: 18px;
+  @media screen and (max-width: 576px){
+    font-size: 16px;
+  }
+}
+.body_text {
+  font-size: 16px;
+  @media screen and (max-width: 576px){
+    font-size: 16px;
+  }
+}
+.note {
+  font-size: 14px;
+  @media screen and (max-width: 576px){
+    font-size: 14px;
+  }
+}
+.large_text {
+  font-size: 64px;
+  @media screen and (max-width: 576px){
+    font-size: 52px;
+  }
+}

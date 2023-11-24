@@ -4,6 +4,7 @@
     <!-- 版頭 -->
     <Hero/>
     <!-- 主張 -->
+    <Advocate/>
     <!-- 活動 -->
     <!-- 議題 -->
     <!-- 小額捐款/服務信箱 -->
@@ -14,9 +15,12 @@
 
 <script>
 import Hero from './components/HeroComp.vue'
+import Advocate from './components/AdvocateComp.vue'
+
 export default {
   components: {
-    Hero
+    Hero,
+    Advocate
   }
 }
 </script>

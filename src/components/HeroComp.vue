@@ -1,11 +1,15 @@
 <template>
   <div>
     <div class="title_block">
-      <p class="title mb-3">台灣的明天 喵先鋪路</p>
-      <div class="subTitle d-flex justify-content-center align-items-center mb-4">
+      <div class="title mb-3 d-flex flex-wrap justify-content-center">
+        <p class="me-md-3">台灣的明天</p>
+        <p>喵先鋪路</p>
+      </div>
+      <div class="subTitle d-flex flex-wrap justify-content-center align-items-center mb-4">
         <InfoTag
           class="me-3"
           :value="'2024 立委參選人'"
+          :isHeroTag="true"
         />
         <div class="person d-flex align-items-center">
           <span class="no_ball me-3">3</span>
@@ -14,8 +18,8 @@
       </div>
       <img src="@/assets/image/hero_all.png" class="d-block hero_img" alt="">
       <div class="slogan">
-        <span class="me-4">為喵星人，護台灣！</span>
-        <span class="me-4">從喵的眼中，看見台灣</span>
+        <span class="me-2 me-md-4">為喵星人，護台灣！</span>
+        <span class="me-2 me-md-4">從喵的眼中，看見台灣</span>
         <span>喵的未來，人的希望</span>
       </div>
     </div>
@@ -36,8 +40,11 @@ export default {
 .title_block {
   text-align: center;
   padding-top: 96px;
+  @media screen and (max-width: 572px) {
+    padding-top: 32px;
+  }
 }
-.title {
+.title p {
   padding: 0;
   margin: 0;
   font-family: Mantou;
@@ -49,6 +56,11 @@ export default {
   background-image: $primary_gradient;
   -webkit-background-clip: text;
   background-clip: text;
+  @media screen and (max-width: 572px) {
+    font-size: 52px;
+    line-height: 55px;;
+    text-align: center;
+  }
 }
 .person{
   padding: 12px 16px;
@@ -67,18 +79,24 @@ export default {
   line-height: 48px;
   letter-spacing: 0px;
   text-align: center;
+  @media screen and (max-width: 572px) {
+    width: 39.83px;
+    height: 39.83px;
+    font-size: 25px;
+    line-height: 38px;
+  }
 }
 .person_name{
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 60px;
-  letter-spacing: -0.02em;
-  text-align: left;
+  @extend .H1_Heading;
+  @extend .H3_Heading;
   color: $primary_theme_1;
 }
 .hero_img {
   max-width: 723px;
   margin: 0 auto;
+  @media screen and (max-width: 572px) {
+    max-width: 343px;
+  }
 }
 .slogan {
   padding: 10px 0;
@@ -92,6 +110,10 @@ export default {
     line-height: 67px;
     letter-spacing: 2px;
     color: white;
+    @media screen and (max-width: 572px) {
+      font-size: 40px;
+      line-height: 42px;
+    }
   }
 }
 </style>

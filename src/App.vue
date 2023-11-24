@@ -2,6 +2,7 @@
   <div>
     <!-- Navbar -->
     <!-- 版頭 -->
+    <Hero/>
     <!-- 主張 -->
     <!-- 活動 -->
     <!-- 議題 -->
@@ -12,9 +13,11 @@
 </template>
 
 <script>
+import Hero from './components/HeroComp.vue'
 export default {
-  name: 'App',
-  components: {}
+  components: {
+    Hero
+  }
 }
 </script>
 

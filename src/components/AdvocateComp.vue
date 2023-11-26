@@ -1,5 +1,5 @@
 <template>
-  <div class="advocate">
+  <div class="section_padding">
     <div class="container">
       <div class="card">
         <div class="row">
@@ -21,7 +21,6 @@
             </div>
           </div>
           <div class="col-12 col-md-6">
-            <!-- <img src="@/assets/image/section2.png" class="img-fluid" alt="..."> -->
             <div class="advocateImg"></div>
           </div>
         </div>
@@ -45,13 +44,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/scss/main.scss';
-.advocate {
-  padding: 104px 0;
-  background-color: $bg_color_theme_2;
-  @media screen and (max-width: 576px) {
-    padding: 64px 0;
-  }
-}
+
 .card {
   border-radius: 32px;
   overflow: hidden;
@@ -94,10 +87,13 @@ export default {
 .advocateImg {
   width: 100%;
   height: 0;
-  padding-top: calc(100% / 924px * 1296px);
+  padding-top: 107%;
   background-image: url('@/assets/image/section2.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  @media screen and (max-width: 572px) {
+    padding-top: 100%;
+  }
 }
 </style>

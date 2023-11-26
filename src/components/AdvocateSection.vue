@@ -1,11 +1,11 @@
 <template>
-  <div class="section_padding">
+  <div class="section_padding section_bg">
     <div class="container">
       <div class="card">
         <div class="row">
           <div class="col-12 col-md-6">
             <div class="card-body">
-              <SectionTitle :value="'候選人主張'"/>
+              <SectionTitle :tagVal="'ADVOCATE'" :value="'候選人主張'"/>
               <div class="point">
                 我堅信 ! 藉由推動更完善的<span>貓咪福利</span>和相關政策，更是間接地投資於<span>台灣的未來</span>。
               </div>
@@ -39,13 +39,15 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/scss/main.scss';
-
+.section_bg {
+  background-color: $bg_color_theme_2;
+}
 .card {
   border-radius: 32px;
   overflow: hidden;
   .card-body {
     padding: 64px 40px;
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 572px) {
       padding: 40px 24px;
     }
   }

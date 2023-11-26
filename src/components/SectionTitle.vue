@@ -1,7 +1,7 @@
 <template>
   <div class="title">
     <InfoTag
-      :value="'ADVOCATE'"
+      :value="tagVal"
     />
     <div class="title_name">{{ value }}</div>
   </div>
@@ -12,6 +12,10 @@ import InfoTag from './InfoTag.vue'
 export default {
   props: {
     value: {
+      type: String,
+      default: ''
+    },
+    tagVal: {
       type: String,
       default: ''
     }

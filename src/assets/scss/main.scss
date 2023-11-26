@@ -193,8 +193,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .section_padding {
   padding: 104px 0;
-  background-color: $bg_color_theme_2;
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 572px) {
     padding: 64px 0;
   }
 }

@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import Hero from './components/HeroComp.vue'
-import Advocate from './components/AdvocateComp.vue'
+import Hero from './components/HeroSection.vue'
+import Advocate from './components/AdvocateSection.vue'
 
 export default {
   components: {

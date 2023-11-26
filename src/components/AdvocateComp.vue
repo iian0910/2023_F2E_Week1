@@ -5,12 +5,7 @@
         <div class="row">
           <div class="col-12 col-md-6">
             <div class="card-body">
-              <div class="title">
-                <InfoTag
-                  :value="'ADVOCATE'"
-                />
-                <div class="title_name">候選人主張</div>
-              </div>
+              <SectionTitle :value="'候選人主張'"/>
               <div class="point">
                 我堅信 ! 藉由推動更完善的<span>貓咪福利</span>和相關政策，更是間接地投資於<span>台灣的未來</span>。
               </div>
@@ -30,14 +25,14 @@
 </template>
 
 <script>
-import InfoTag from './InfoTag.vue'
+import SectionTitle from '../components/SectionTitle.vue'
 
 export default {
   data () {
     return {}
   },
   components: {
-    InfoTag
+    SectionTitle
   }
 }
 </script>
@@ -55,21 +50,6 @@ export default {
     }
   }
 }
-.title {
-  margin-bottom: 32px;
-  text-align: center;
-}
-.title_name {
-  font-family: Mantou;
-  font-size: 64px;
-  font-weight: 400;
-  line-height: 93px;
-  letter-spacing: 0em;
-  color: transparent;
-  background-image: $primary_gradient;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
 .point {
   @extend .H3_Heading;
   font-weight: 700;
@@ -86,8 +66,7 @@ export default {
 }
 .advocateImg {
   width: 100%;
-  height: 0;
-  padding-top: 107%;
+  height: 100%;
   background-image: url('@/assets/image/section2.png');
   background-position: center;
   background-size: cover;

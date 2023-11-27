@@ -40,7 +40,7 @@ export default {
 .title_block {
   text-align: center;
   padding-top: 96px;
-  @media screen and (max-width: 572px) {
+  @include mobile {
     padding-top: 32px;
   }
 }
@@ -56,7 +56,7 @@ export default {
   background-image: $primary_gradient;
   -webkit-background-clip: text;
   background-clip: text;
-  @media screen and (max-width: 572px) {
+  @include mobile {
     font-size: 52px;
     line-height: 55px;;
     text-align: center;
@@ -79,7 +79,7 @@ export default {
   line-height: 48px;
   letter-spacing: 0px;
   text-align: center;
-  @media screen and (max-width: 572px) {
+  @include mobile {
     width: 39.83px;
     height: 39.83px;
     font-size: 25px;
@@ -94,7 +94,7 @@ export default {
 .hero_img {
   max-width: 723px;
   margin: 0 auto;
-  @media screen and (max-width: 572px) {
+  @include mobile {
     max-width: 343px;
   }
 }
@@ -110,7 +110,7 @@ export default {
     line-height: 67px;
     letter-spacing: 2px;
     color: white;
-    @media screen and (max-width: 572px) {
+    @include mobile {
       font-size: 40px;
       line-height: 42px;
     }

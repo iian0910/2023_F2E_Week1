@@ -42,5 +42,10 @@ export default {
   background-image: $primary_gradient;
   -webkit-background-clip: text;
   background-clip: text;
+  @include mobile {
+    font-size: 52px;
+    line-height: 75px;
+    text-align: center;
+  }
 }
 </style>

@@ -25,7 +25,7 @@ export default {
 
 .footer_padding {
   padding: 64px 0;
-  @media screen and (max-width: 572px) {
+  @include mobile {
     padding: 64px 16px;
   }
 }

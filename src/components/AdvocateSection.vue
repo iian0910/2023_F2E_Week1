@@ -47,13 +47,14 @@ export default {
   overflow: hidden;
   .card-body {
     padding: 64px 40px;
-    @media screen and (max-width: 572px) {
+    @include mobile {
       padding: 40px 24px;
     }
   }
 }
 .point {
   @extend .H3_Heading;
+  @extend .H4_Heading_2;
   font-weight: 700;
   margin-bottom: 32px;
   color: $text_primary-700;
@@ -73,7 +74,7 @@ export default {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  @media screen and (max-width: 572px) {
+  @include mobile {
     padding-top: 100%;
   }
 }

@@ -12,6 +12,18 @@
   font-style: normal;
 }
 
+@mixin pad{
+  @media(max-width:768px){
+    @content;
+  }
+}
+
+@mixin mobile{
+  @media(max-width:576px){
+    @content;
+  }
+}
+
 * {
   font-family: 'Inter';
 }
@@ -28,7 +40,7 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: -0.02em;
   text-align: left;
 }
-@media (max-width: 572px) {
+@include mobile {
   .H1_Heading_mo {
     font-size: 16px;
     font-weight: 500;
@@ -45,7 +57,7 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 0em;
   text-align: left;
 }
-@media (max-width: 572px) {
+@include mobile {
   .H2_Heading {
     font-size: 16px;
     font-weight: 500;
@@ -62,7 +74,7 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 0em;
   text-align: left;
 }
-@media (max-width: 572px) {
+@include mobile {
   .H3_Heading_mo {
     font-size: 16px;
     font-weight: 500;
@@ -79,12 +91,21 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 0em;
   text-align: left;
 }
-@media (max-width: 572px) {
+@include mobile {
   .H4_Heading_mo {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.011em;
+    text-align: left;
+  }
+}
+@include mobile {
+  .H4_Heading_2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
     text-align: left;
   }
 }
@@ -96,7 +117,7 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 0em;
   text-align: left;
 }
-@media (max-width: 572px) {
+@include mobile {
   .H5_Heading_mo {
     font-size: 16px;
     font-weight: 500;
@@ -113,7 +134,7 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 0em;
   text-align: left;
 }
-@media (max-width: 572px) {
+@include mobile {
   .H6_Heading_mo {
     font-size: 16px;
     font-weight: 500;
@@ -130,7 +151,7 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 0em;
   text-align: left;
 }
-@media (max-width: 572px) {
+@include mobile {
   .base_text_mo {
     font-size: 16px;
     font-weight: 500;
@@ -147,7 +168,7 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 0em;
   text-align: left;
 }
-@media (max-width: 572px) {
+@include mobile {
   .body_mo {
     font-size: 16px;
     font-weight: 500;
@@ -164,7 +185,7 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 0em;
   text-align: left;
 }
-@media (max-width: 572px) {
+@include mobile {
   .small {
     font-size: 16px;
     font-weight: 500;
@@ -181,7 +202,7 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 0em;
   text-align: left;
 }
-@media (max-width: 572px) {
+@include mobile {
   .large_text {
     font-size: 16px;
     font-weight: 500;
@@ -193,7 +214,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .section_padding {
   padding: 104px 0;
-  @media screen and (max-width: 572px) {
+  @include mobile {
     padding: 64px 0;
   }
 }

@@ -58,7 +58,7 @@ export default {
   background-clip: text;
   @include mobile {
     font-size: 52px;
-    line-height: 55px;;
+    line-height: 55px;
     text-align: center;
   }
 }

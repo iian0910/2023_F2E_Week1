@@ -1,6 +1,7 @@
 <template>
   <div>
     <!-- Navbar -->
+    <Navbar/>
     <!-- 版頭 -->
     <Hero/>
     <!-- 主張 -->
@@ -19,6 +20,7 @@
 </template>
 
 <script>
+import Navbar from './components/PageNavbar.vue'
 import Hero from './components/HeroSection.vue'
 import Advocate from './components/AdvocateSection.vue'
 import Event from './components/EventSection.vue'
@@ -29,6 +31,7 @@ import Footer from './components/FooterSection.vue'
 
 export default {
   components: {
+    Navbar,
     Hero,
     Advocate,
     Event,

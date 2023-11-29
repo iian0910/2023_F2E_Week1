@@ -3,17 +3,17 @@
     <!-- Navbar -->
     <Navbar/>
     <!-- 版頭 -->
-    <Hero/>
+    <Hero id="hero"/>
     <!-- 主張 -->
-    <Advocate/>
+    <Advocate id="advocate"/>
     <!-- 活動 -->
-    <Event/>
+    <Event id="event"/>
     <!-- 議題 -->
-    <Policy/>
+    <Policy id="policy"/>
     <!-- 小額捐款/服務信箱 -->
-    <Active/>
+    <Active id="active"/>
     <!-- 結尾 -->
-    <End/>
+    <End id="end"/>
     <!-- Footer -->
     <Footer/>
   </div>

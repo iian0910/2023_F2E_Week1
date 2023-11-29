@@ -5,7 +5,7 @@
       <p class="mb-0">喵先鋪路</p>
     </div>
     <div class="d-flex justify-content-center">
-      <div class="person d-flex">
+      <div class="person d-flex align-items-center">
         <span class="no_ball me-3">3</span>
         <h1 class="person_name">喵立翰 Miao Li-Han</h1>
       </div>

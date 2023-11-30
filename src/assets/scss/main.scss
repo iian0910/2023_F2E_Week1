@@ -42,11 +42,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 @include mobile {
   .H1_Heading_mo {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: -0.011em;
-    text-align: left;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 24px !important;
+    letter-spacing: -0.011em !important;
+    text-align: left !important;
   }
 }
 .H2_Heading {
@@ -58,12 +58,12 @@ h1,h2,h3,h4,h5,h6 {
   text-align: left;
 }
 @include mobile {
-  .H2_Heading {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: -0.011em;
-    text-align: left;
+  .H2_Heading_mo {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 24px !important;
+    letter-spacing: -0.011em !important;
+    text-align: left !important;
   }
 }
 .H3_Heading {
@@ -76,11 +76,19 @@ h1,h2,h3,h4,h5,h6 {
 }
 @include mobile {
   .H3_Heading_mo {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: -0.011em;
-    text-align: left;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 24px !important;
+    letter-spacing: -0.011em !important;
+    text-align: left !important;
+  }
+  .H3_Heading_mo_2 {
+    //styleName: Bold/H3 Heading
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    line-height: 42px !important;
+    letter-spacing: 0em !important;
+    text-align: left !important;
   }
 }
 .H4_Heading {
@@ -93,20 +101,18 @@ h1,h2,h3,h4,h5,h6 {
 }
 @include mobile {
   .H4_Heading_mo {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: -0.011em;
-    text-align: left;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 24px !important;
+    letter-spacing: -0.011em !important;
+    text-align: left !important;
   }
-}
-@include mobile {
-  .H4_Heading_2 {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 36px;
-    letter-spacing: 0em;
-    text-align: left;
+  .H4_Heading_mo_2 {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    line-height: 36px !important;
+    letter-spacing: 0em !important;
+    text-align: left !important;
   }
 }
 .H5_Heading {
@@ -119,11 +125,19 @@ h1,h2,h3,h4,h5,h6 {
 }
 @include mobile {
   .H5_Heading_mo {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: -0.011em;
-    text-align: left;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 24px !important;
+    letter-spacing: -0.011em !important;
+    text-align: left !important;
+  }
+  .H5_Heading_mo_2 {
+    //styleName: Bold/H5 Heading
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    line-height: 30px !important;
+    letter-spacing: 0em !important;
+    text-align: left !important;
   }
 }
 .H6_Heading {
@@ -136,11 +150,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 @include mobile {
   .H6_Heading_mo {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: -0.011em;
-    text-align: left;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 24px !important;
+    letter-spacing: -0.011em !important;
+    text-align: left !important;
   }
 }
 .base_text {
@@ -153,11 +167,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 @include mobile {
   .base_text_mo {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: -0.011em;
-    text-align: left;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 24px !important;
+    letter-spacing: -0.011em !important;
+    text-align: left !important;
   }
 }
 .body {
@@ -170,11 +184,19 @@ h1,h2,h3,h4,h5,h6 {
 }
 @include mobile {
   .body_mo {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: -0.011em;
-    text-align: left;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 24px !important;
+    letter-spacing: -0.011em !important;
+    text-align: left !important;
+  }
+  .body_mo_2 {
+    //styleName: Body/Body
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 24px !important;
+    letter-spacing: 0em !important;
+    text-align: left !important;
   }
 }
 .small {
@@ -186,12 +208,12 @@ h1,h2,h3,h4,h5,h6 {
   text-align: left;
 }
 @include mobile {
-  .small {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: -0.011em;
-    text-align: left;
+  .small_mo {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 24px !important;
+    letter-spacing: -0.011em !important;
+    text-align: left !important;
   }
 }
 .large_text {
@@ -203,15 +225,14 @@ h1,h2,h3,h4,h5,h6 {
   text-align: left;
 }
 @include mobile {
-  .large_text {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: -0.011em;
-    text-align: left;
+  .large_text_mo {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 24px !important;
+    letter-spacing: -0.011em !important;
+    text-align: left !important;
   }
 }
-
 .section_padding {
   padding: 104px 0;
   @include mobile {

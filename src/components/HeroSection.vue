@@ -13,7 +13,7 @@
         />
         <div class="person d-flex align-items-center">
           <span class="no_ball me-3">3</span>
-          <h1 class="person_name">喵立翰 Miao Li-Han</h1>
+          <h1 class="person_name H1_Heading H3_Heading_mo_2">喵立翰 Miao Li-Han</h1>
         </div>
       </div>
       <img src="@/assets/image/hero_all.png" class="d-block hero_img" alt="">
@@ -87,8 +87,6 @@ export default {
   }
 }
 .person_name{
-  @extend .H1_Heading;
-  @extend .H3_Heading;
   color: $primary_theme_1;
 }
 .hero_img {

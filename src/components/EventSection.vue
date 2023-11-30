@@ -8,7 +8,7 @@
             <img :src="mainEvent.imgUrl" class="card-img-top rounded" alt="...">
             <div class="card-body px-0 py-0 pt-3">
               <p class="event_main_date mb-2">{{mainEvent.date}}</p>
-              <p class="event_main_title mb-2">{{mainEvent.title}}</p>
+              <p class="event_main_title H5_Heading mb-2">{{mainEvent.title}}</p>
               <p class="event_main_content">{{mainEvent.content}}</p>
             </div>
           </div>
@@ -28,9 +28,9 @@
               </div>
               <div class="col-8">
                 <div class="card-body p-0">
-                  <p class="event_date mb-2">{{item.date}}</p>
-                  <p class="event_title mb-2">{{item.title}}</p>
-                  <p class="event_content">{{item.content}}</p>
+                  <p class="event_date small mb-2">{{item.date}}</p>
+                  <p class="event_title H6_Heading mb-2">{{item.title}}</p>
+                  <p class="event_content body">{{item.content}}</p>
                 </div>
               </div>
             </div>
@@ -118,20 +118,16 @@ export default {
 
 .event_main_date,
 .event_date {
-  @extend .small;
   color: $text_primary-500;
 }
 .event_main_title {
-  @extend .H5_Heading;
   color: $text_primary-700;
 }
 .event_title {
-  @extend .H6_Heading;
   color: $text_primary-700;
 }
 .event_main_content,
 .event_content {
-  @extend .body;
   color: $text_primary-700;
 }
 .event_img {

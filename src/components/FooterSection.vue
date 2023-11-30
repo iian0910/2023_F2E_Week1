@@ -5,7 +5,7 @@
         <div class="col-12 col-md-6 mb-4 mb-md-0">
           <div class="mb-3 person d-flex align-items-center">
             <span class="no_ball me-2">3</span>
-            <h1 class="person_name">喵立翰 Miao Li-Han</h1>
+            <h1 class="person_name H3_Heading">喵立翰 Miao Li-Han</h1>
           </div>
           <div class="mb-3 d-flex align-items-center">
             <div class="media_ball me-2">
@@ -18,11 +18,11 @@
               <img src="@/assets/image/youtube.svg" class="img-fluid" alt="">
             </div>
           </div>
-          <p class="m-0 info">© 2023 喵立翰 Miao Li-Han 版權所有</p>
+          <p class="m-0 info small">© 2023 喵立翰 Miao Li-Han 版權所有</p>
         </div>
         <div class="col-12 col-md-6">
-          <div class="addr_title mb-3">競選總部</div>
-          <div class="addr_info">
+          <div class="addr_title H4_Heading mb-3">競選總部</div>
+          <div class="addr_info body">
             辦公室地址：喵星區，毛茸茸大道88號，喵喵大樓3樓<br/>
             電話：(02) 888-5678<br/>
             電子郵件地址：meowoffice@linmeow.tw
@@ -73,7 +73,6 @@ export default {
   text-align: center;
 }
 .person_name{
-  @extend .H3_Heading;
   color: $primary_theme_1;
 }
 .media_ball {
@@ -84,15 +83,12 @@ export default {
   background-color: white;
 }
 .info {
-  @extend .small;
   color: $text_primary-700;
 }
 .addr_title {
-  @extend .H4_Heading;
   color: $text_primary-700;
 }
 .addr_info {
-  @extend .body;
   color: $text_primary-700;
 }
 </style>

@@ -24,19 +24,19 @@
             <div class="row">
               <div class="col-12 col-md-4 ps-0 pe-3">
                 <img :src="objData.imgUrl" class="img-fluid event_modal_img mb-3" alt="">
-                <div class="img_title mb-2">{{ objData.title }}</div>
+                <div class="img_title small body_mo_2 mb-2">{{ objData.title }}</div>
                 <div class="d-flex align-items-center">
-                  <span class="share_title me-3">分享</span>
+                  <span class="share_title body me-3">分享</span>
                   <img src="@/assets/image/fb.svg" class="d-block share_media me-3" alt="">
                   <img src="@/assets/image/ig.svg" class="d-block share_media me-3" alt="">
                   <img src="@/assets/image/line.svg" class="d-block share_media me-3" alt="">
                   <img src="@/assets/image/youtube.svg" class="d-block share_media" alt="">
                 </div>
               </div>
-              <div class="col-12 col-md-8 ps-3 pe-0">
-                <div class="content_title mb-2">{{ objData.title }}</div>
-                <div class="content_date">{{ objData.date }}</div>
-                <div class="content_text">{{ objData.content }}</div>
+              <div class="col-12 col-md-8 px-0 ps-md-3">
+                <div class="content_title H2_Heading mb-2">{{ objData.title }}</div>
+                <div class="content_date small">{{ objData.date }}</div>
+                <div class="content_text body">{{ objData.content }}</div>
                 <div class="relation_content p-3">
                   <div class="relation_title m-3">更多活動</div>
                   <div class="container">
@@ -44,7 +44,7 @@
                       <div class="col-4" v-for="item in objData.subEvent" :key="item.id">
                         <div class="card border-0">
                           <img :src="item.imgUrl" class="card-img-top relation_item_img">
-                          <p class="card-text relation_item_title">{{ item.title }}</p>
+                          <p class="card-text relation_item_title body">{{ item.title }}</p>
                         </div>
                       </div>
                     </div>
@@ -105,16 +105,17 @@ export default {
 }
 .event_modal_body {
   padding: 8px 48px 48px 48px;
+  @include mobile {
+    padding: 8px 16px 16px 16px;
+  }
 }
 .event_modal_img {
   border-radius: 24px;
 }
 .img_title {
-  @extend .small;
   color: $text_primary-700;
 }
 .share_title {
-  @extend .body;
   color: $text_primary-700;
 }
 .share_media {
@@ -122,16 +123,13 @@ export default {
   height: 28px;
 }
 .content_title {
-  @extend .H2_Heading;
   color: $primary_theme_1;
 }
 .content_date {
-  @extend .small;
   margin-bottom: 40px;
   color: $text_primary-500;
 }
 .content_text {
-  @extend .body;
   margin-bottom: 96px;
   color: $text_primary-700;
 }
@@ -147,7 +145,6 @@ export default {
   margin-bottom: 12px;
 }
 .relation_item_title {
-  @extend .body;
   color: $text_primary-700;
 }
 </style>

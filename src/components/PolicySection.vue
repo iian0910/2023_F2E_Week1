@@ -4,15 +4,15 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-4 policy_1">
-          <div class="policy_title px-3 pb-3">為毛孩子謀福利！推動寵物醫療保障方案</div>
+          <div class="policy_title H4_Heading px-3 pb-3">為毛孩子謀福利！推動寵物醫療保障方案</div>
           <div class="policy_img img_1"></div>
         </div>
         <div class="col-12 col-md-4 policy_2">
-          <div class="policy_title px-3 pb-3">打造休閒天堂！推廣寵物休閒與娛樂場所</div>
+          <div class="policy_title H4_Heading px-3 pb-3">打造休閒天堂！推廣寵物休閒與娛樂場所</div>
           <div class="policy_img img_2"></div>
         </div>
         <div class="col-12 col-md-4 policy_3">
-          <div class="policy_title px-3 pb-3">推廣寵物飼養教育，讓愛更加專業</div>
+          <div class="policy_title H4_Heading px-3 pb-3">推廣寵物飼養教育，讓愛更加專業</div>
           <div class="policy_img img_3"></div>
         </div>
       </div>
@@ -40,7 +40,6 @@ export default {
   background-color: $bg_color_theme_1;
 }
 .policy_title {
-  @extend .H4_Heading;
   color: $text_primary-700;
 }
 .policy_img {

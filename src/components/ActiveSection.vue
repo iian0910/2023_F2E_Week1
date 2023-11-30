@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-12 col-md-6 mb-3 mb-lg-0">
           <div class="box donate">
-            <div class="title mb-3">小額支持喵喵</div>
+            <div class="title large_text mb-3">小額支持喵喵</div>
             <div class="sub_title mb-4">您的小筆捐款，是每隻毛孩未來的大大動力！</div>
             <div class="container p-0">
               <div class="row align-items-center g-0">
@@ -20,7 +20,7 @@
         </div>
         <div class="col-12 col-md-6">
           <div class="box service">
-            <div class="title mb-3">民眾服務信箱</div>
+            <div class="title large_text mb-3">民眾服務信箱</div>
             <div class="sub_title mb-4">親愛的鄉親，每一位市民的意見都是我們社區前進的原動力</div>
             <div class="container p-0">
               <div class="row align-items-center g-0">
@@ -67,7 +67,6 @@ export default {
   background-color: $text_primary-700;
 }
 .title {
-  @extend .large_text;
   color: white;
   @include mobile {
     font-size: 40px;

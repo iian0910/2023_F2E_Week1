@@ -1,6 +1,6 @@
 <template>
-  <h3 class="tag hero_tag" v-if="isHeroTag">{{value}}</h3>
-  <h6 class="tag other_tag" v-else>{{value}}</h6>
+  <h3 class="tag H3_Heading H5_Heading_mo_2" v-if="isHeroTag">{{value}}</h3>
+  <h6 class="tag H6_Heading" v-else>{{value}}</h6>
 </template>
 
 <script>
@@ -27,12 +27,5 @@ export default {
   color: white;
   display: inline-block;
   border-radius: 16px;
-}
-.hero_tag{
-  @extend .H3_Heading;
-  @extend .H5_Heading;
-}
-.other_tag {
-  @extend .H6_Heading;
 }
 </style>

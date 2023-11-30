@@ -4,14 +4,14 @@
       <div class="container-fluid px-4 navbar_content">
         <div class="d-flex align-items-center">
           <img src="@/assets/image/logo.png" class="logo d-block me-2" alt="">
-          <div class="logo_title">喵立翰 Miao Li-Han</div>
+          <div class="logo_title H4_Heading">喵立翰 Miao Li-Han</div>
         </div>
         <div class="d-flex align-items-center">
-          <p class="item m-0 me-3" @click="toAnchor('advocate')">候選人主張</p>
-          <p class="item m-0 me-3" @click="toAnchor('event')">最新活動</p>
-          <p class="item m-0 me-3" @click="toAnchor('policy')">政策議題</p>
-          <p class="item m-0 me-3" @click="toAnchor('active')">小額捐款</p>
-          <p class="item m-0" @click="toAnchor('active')">民眾服務信箱</p>
+          <p class="item base_text m-0 me-3" @click="toAnchor('advocate')">候選人主張</p>
+          <p class="item base_text m-0 me-3" @click="toAnchor('event')">最新活動</p>
+          <p class="item base_text m-0 me-3" @click="toAnchor('policy')">政策議題</p>
+          <p class="item base_text m-0 me-3" @click="toAnchor('active')">小額捐款</p>
+          <p class="item base_text m-0" @click="toAnchor('active')">民眾服務信箱</p>
         </div>
         <div class="d-flex align-items-center">
           <img src="@/assets/image/fb.svg" class="d-block me-3" alt="">
@@ -71,11 +71,9 @@ export default {
   height: 43px;
 }
 .logo_title {
-  @extend .H4_Heading;
   color: $primary_theme_1;
 }
 .item {
-  @extend .base_text;
   color: $text_primary-700;
   cursor: pointer;
 }

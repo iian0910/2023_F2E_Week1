@@ -7,7 +7,7 @@
     <div class="d-flex justify-content-center">
       <div class="person d-flex align-items-center">
         <span class="no_ball me-3">3</span>
-        <h1 class="person_name">喵立翰 Miao Li-Han</h1>
+        <h1 class="person_name H1_Heading H4_Heading_2">喵立翰 Miao Li-Han</h1>
       </div>
     </div>
   </div>
@@ -73,8 +73,6 @@ export default {
   }
 }
 .person_name{
-  @extend .H1_Heading;
-  @extend .H4_Heading_2;
   color: $primary_theme_1;
 }
 </style>

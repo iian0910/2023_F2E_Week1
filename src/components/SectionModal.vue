@@ -22,7 +22,7 @@
         <div class="modal-body event_modal_body" v-if="objData">
           <div class="container">
             <div class="row">
-              <div class="col-12 col-md-4 ps-0 pe-3">
+              <div class="col-12 col-md-4 px-0 pe-md-3 left_side">
                 <img :src="objData.imgUrl" class="img-fluid event_modal_img mb-3" alt="">
                 <div class="img_title small body_mo_2 mb-2">{{ objData.title }}</div>
                 <div class="d-flex align-items-center">
@@ -34,14 +34,14 @@
                 </div>
               </div>
               <div class="col-12 col-md-8 px-0 ps-md-3">
-                <div class="content_title H2_Heading mb-2">{{ objData.title }}</div>
+                <div class="content_title H2_Heading H4_Heading_mo_2 mb-2">{{ objData.title }}</div>
                 <div class="content_date small">{{ objData.date }}</div>
                 <div class="content_text body">{{ objData.content }}</div>
-                <div class="relation_content p-3">
+                <div class="relation_content p-0 p-md-3">
                   <div class="relation_title m-3">更多活動</div>
                   <div class="container">
                     <div class="row">
-                      <div class="col-4" v-for="item in objData.subEvent" :key="item.id">
+                      <div class="col-6 col-md-4 mb-3 mb-md-0" v-for="item in objData.subEvent" :key="item.id">
                         <div class="card border-0">
                           <img :src="item.imgUrl" class="card-img-top relation_item_img">
                           <p class="card-text relation_item_title body">{{ item.title }}</p>
@@ -99,14 +99,26 @@ export default {
   background-repeat: no-repeat;
   border: none;
   background-color: transparent;
+  @include mobile {
+    width: 24px;
+    height: 24px;
+  }
 }
 .event_modal_header {
   padding: 24px 48px;
+  @include mobile {
+    padding: 16px 16px 8px 16px;
+  }
 }
 .event_modal_body {
   padding: 8px 48px 48px 48px;
   @include mobile {
     padding: 8px 16px 16px 16px;
+  }
+}
+.left_side {
+  @include mobile {
+    margin-bottom: 32px;
   }
 }
 .event_modal_img {

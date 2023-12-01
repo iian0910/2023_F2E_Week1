@@ -54,6 +54,7 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/scss/main.scss';
 .box {
+  height: 100%;
   padding: 96px;
   border-radius: 32px;
   @include mobile {

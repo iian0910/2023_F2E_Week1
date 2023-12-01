@@ -86,6 +86,9 @@ export default {
 }
 .policy_title {
   color: $text_primary-700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .policy_img {
   width: 100%;

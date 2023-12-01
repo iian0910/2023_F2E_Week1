@@ -7,7 +7,7 @@
     <div class="d-flex justify-content-center">
       <div class="person d-flex align-items-center">
         <span class="no_ball me-3">3</span>
-        <h1 class="person_name H1_Heading H4_Heading_2">喵立翰 Miao Li-Han</h1>
+        <h1 class="person_name H1_Heading H4_Heading_mo_2">喵立翰 Miao Li-Han</h1>
       </div>
     </div>
   </div>
@@ -66,10 +66,10 @@ export default {
   letter-spacing: 0px;
   text-align: center;
   @include mobile {
-    width: 39.83px;
-    height: 39.83px;
-    font-size: 25px;
-    line-height: 38px;
+    width: 33px;
+    height: 33px;
+    font-size: 24px;
+    line-height: 36px;
   }
 }
 .person_name{

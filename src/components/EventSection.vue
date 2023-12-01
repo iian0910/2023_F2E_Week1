@@ -3,20 +3,27 @@
     <div class="container">
       <SectionTitle :tagVal="'LATEST EVENTS'" :value="'最新活動'"/>
       <div class="row">
-        <div class="main_event col-12 col-md-6 mb-4 mb-md-0" @click="openEventModal(mainEvent)">
+        <div
+          class="main_event col-12 col-md-6 mb-4 mb-md-0"
+          @click="openEventModal(eventList[0])"
+        >
           <div class="card border-0">
-            <img :src="mainEvent.imgUrl" class="card-img-top rounded" alt="...">
+            <img
+              :src="eventList[0].imgUrl"
+              class="card-img-top rounded"
+              alt="..."
+            >
             <div class="card-body px-0 py-0 pt-3">
-              <p class="event_main_date mb-2">{{mainEvent.date}}</p>
-              <p class="event_main_title H5_Heading mb-2">{{mainEvent.title}}</p>
-              <p class="event_main_content">{{mainEvent.content}}</p>
+              <p class="event_main_date mb-2">{{eventList[0].date}}</p>
+              <p class="event_main_title H5_Heading mb-2">{{eventList[0].title}}</p>
+              <p class="event_main_content">{{eventList[0].content}}</p>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-6">
           <div
             class="card mb-4 border-0"
-            v-for="item in mainEvent.subEvent"
+            v-for="item in otherEvent"
             :key="item.id"
           >
             <div class="row g-2">
@@ -42,7 +49,8 @@
     <!-- Modal -->
     <SectionModal
       :modalTitle= "'最新活動'"
-      :event="currentEvent"
+      :listItem="currentEvent"
+      :allList="eventList"
     />
   </div>
 </template>
@@ -50,7 +58,7 @@
 <script>
 import SectionTitle from './SectionTitle.vue'
 import GoToButton from '../components/GoToButton.vue'
-import SectionModal from '../components/SectionModal.vue'
+import SectionModal from './EventModal.vue'
 import { Modal } from 'bootstrap'
 import event01 from '@/assets/image/event01.png'
 import event02 from '@/assets/image/event02.png'
@@ -59,37 +67,38 @@ import event03 from '@/assets/image/event03.png'
 export default {
   data () {
     return {
-      openModal: false,
+      isOpenModal: false,
       modal: null,
-      mainEvent: {
-        imgUrl: event01,
-        date: '2023/11/27',
-        title: '參與台北寵物論壇，爭取貓咪友善環境',
-        content: '炎炎夏日的周六，我走進了台北寵物論壇，帶著一副貓耳髮箍，決定要全力宣傳「貓咪至上」的理念！我相信，我們的都市中，每一隻貓咪都應該有自己的 VIP 休憩空間。',
-        subEvent: [
-          {
-            id: '01',
-            imgUrl: event02,
-            date: '2023/11/27',
-            title: '掃街模式開啟！帶著你的貓耳，來和我一起走！',
-            content: '街上氣氛真的很棒，從小孩到大人，甚至有些狗狗朋友都帶著貓耳來找我握手，真的太可愛了！'
-          },
-          {
-            id: '02',
-            imgUrl: event03,
-            date: '2023/11/27',
-            title: '掃街模式開啟！帶著你的貓耳，來和我一起走！',
-            content: '街上氣氛真的很棒，從小孩到大人，甚至有些狗狗朋友都帶著貓耳來找我握手，真的太可愛了！'
-          },
-          {
-            id: '03',
-            imgUrl: event02,
-            date: '2023/11/27',
-            title: '掃街模式開啟！帶著你的貓耳，來和我一起走！',
-            content: '街上氣氛真的很棒，從小孩到大人，甚至有些狗狗朋友都帶著貓耳來找我握手，真的太可愛了！'
-          }
-        ]
-      },
+      eventList: [
+        {
+          id: '01',
+          imgUrl: event01,
+          date: '2023/11/27',
+          title: '參與台北寵物論壇，爭取貓咪友善環境',
+          content: '炎炎夏日的周六，我走進了台北寵物論壇，帶著一副貓耳髮箍，決定要全力宣傳「貓咪至上」的理念！我相信，我們的都市中，每一隻貓咪都應該有自己的 VIP 休憩空間。'
+        },
+        {
+          id: '02',
+          imgUrl: event02,
+          date: '2023/11/27',
+          title: '掃街模式開啟！帶著你的貓耳，來和我一起走！',
+          content: '街上氣氛真的很棒，從小孩到大人，甚至有些狗狗朋友都帶著貓耳來找我握手，真的太可愛了！'
+        },
+        {
+          id: '03',
+          imgUrl: event03,
+          date: '2023/11/27',
+          title: '掃街模式開啟！帶著你的貓耳，來和我一起走！',
+          content: '街上氣氛真的很棒，從小孩到大人，甚至有些狗狗朋友都帶著貓耳來找我握手，真的太可愛了！'
+        },
+        {
+          id: '04',
+          imgUrl: event02,
+          date: '2023/11/27',
+          title: '掃街模式開啟！帶著你的貓耳，來和我一起走！',
+          content: '街上氣氛真的很棒，從小孩到大人，甚至有些狗狗朋友都帶著貓耳來找我握手，真的太可愛了！'
+        }
+      ],
       currentEvent: null
     }
   },
@@ -99,12 +108,23 @@ export default {
     SectionModal
   },
   mounted () {},
+  computed: {
+    otherEvent () {
+      const result = this.eventList.filter((item, index) => {
+        return index >= 1
+      })
+      return result
+    }
+  },
   methods: {
     openEventModal (item) {
       this.currentEvent = item
-      const myModal = document.getElementById('exampleModal')
-      const ins = Modal.getOrCreateInstance(myModal)
-      ins.show()
+      this.$nextTick(() => {
+        const myModal = document.getElementById('eventModal')
+        const ins = Modal.getOrCreateInstance(myModal)
+        this.isOpenModal = true
+        ins.show()
+      })
     }
   }
 }

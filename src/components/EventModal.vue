@@ -1,7 +1,7 @@
 <template>
   <div
     class="modal fade"
-    id="exampleModal"
+    id="eventModal"
   >
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
@@ -17,6 +17,7 @@
             class="close"
             data-bs-dismiss="modal"
             aria-label="Close"
+            @click="closeModal()"
           ></button>
         </div>
         <div class="modal-body event_modal_body" v-if="objData">
@@ -41,7 +42,7 @@
                   <div class="relation_title m-3">更多活動</div>
                   <div class="container">
                     <div class="row">
-                      <div class="col-6 col-md-4 mb-3 mb-md-0" v-for="item in objData.subEvent" :key="item.id">
+                      <div class="col-6 col-md-4 mb-3 mb-md-0" v-for="item in otherEvent" :key="item.id">
                         <div class="card border-0">
                           <img :src="item.imgUrl" class="card-img-top relation_item_img">
                           <p class="card-text relation_item_title body">{{ item.title }}</p>
@@ -66,9 +67,13 @@ export default {
       type: String,
       default: ''
     },
-    event: {
+    listItem: {
       type: Object,
       default: () => ({})
+    },
+    allList: {
+      type: Array,
+      default: () => ([])
     }
   },
   data () {
@@ -76,13 +81,26 @@ export default {
       objData: null
     }
   },
+  computed: {
+    otherEvent () {
+      const other = this.allList.filter((item, index) => {
+        return index >= 1
+      })
+
+      return other
+    }
+  },
   watch: {
-    event: {
+    listItem: {
       handler (val) {
-        console.log('收到了 ==>', val)
         this.objData = val
       },
       immediate: true
+    }
+  },
+  methods: {
+    closeModal () {
+      this.$emit('closeModal')
     }
   }
 }

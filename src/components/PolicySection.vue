@@ -67,12 +67,10 @@ export default {
   methods: {
     openEventModal (item) {
       this.currentEvent = item
-      this.$nextTick(() => {
-        const myModal = document.getElementById('policyModal')
-        const ins = Modal.getOrCreateInstance(myModal)
-        this.isOpenModal = true
-        ins.show()
-      })
+      const myModal = document.getElementById('policyModal')
+      const ins = Modal.getOrCreateInstance(myModal)
+      this.isOpenModal = true
+      ins.show()
     }
   }
 }

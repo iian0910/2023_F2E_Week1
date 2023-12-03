@@ -84,7 +84,7 @@ export default {
   computed: {
     otherEvent () {
       const other = this.allList.filter((item, index) => {
-        return index >= 1
+        return this.listItem.id !== item.id
       })
 
       return other

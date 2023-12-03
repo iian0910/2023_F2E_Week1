@@ -68,8 +68,6 @@ import event03 from '@/assets/image/event03.png'
 export default {
   data () {
     return {
-      isOpenModal: false,
-      modal: null,
       eventList: [
         {
           id: '01',
@@ -122,7 +120,6 @@ export default {
       this.currentEvent = item
       const myModal = document.getElementById('eventModal')
       const ins = Modal.getOrCreateInstance(myModal)
-      this.isOpenModal = true
       ins.show()
     }
   }

@@ -7,7 +7,7 @@
       <div class="modal-content">
         <div class="modal-header event_modal_header border-0">
           <h5
-            class="modal-title"
+            class="modal-title H2_Heading H4_Heading_mo_2"
             id="exampleModalLabel"
           >
             {{ modalTitle }}

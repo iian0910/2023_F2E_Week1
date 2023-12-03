@@ -8,8 +8,13 @@
             <div class="sub_title mb-4">您的小筆捐款，是每隻毛孩未來的大大動力！</div>
             <div class="container p-0">
               <div class="row align-items-center g-0">
-                <div class="col-6">
-                  <GoToButton :value="'小額捐款'"/>
+                <div
+                  class="col-6"
+                  @click="openEventModal()"
+                >
+                  <GoToButton
+                    :value="'小額捐款'"
+                  />
                 </div>
                 <div class="col-6">
                   <div class="active_img hand"></div>
@@ -25,7 +30,9 @@
             <div class="container p-0">
               <div class="row align-items-center g-0">
                 <div class="col-6">
-                  <GoToButton :value="'填寫表單'"/>
+                  <GoToButton
+                    :value="'填寫表單'"
+                  />
                 </div>
                 <div class="col-6">
                   <div class="active_img mail"></div>
@@ -36,17 +43,32 @@
         </div>
       </div>
     </div>
+    <!-- Modal -->
+    <SectionModal />
   </div>
 </template>
 
 <script>
 import GoToButton from '../components/GoToButton.vue'
+import SectionModal from './DonateModal.vue'
+import { Modal } from 'bootstrap'
+
 export default {
   data () {
     return {}
   },
   components: {
-    GoToButton
+    GoToButton,
+    SectionModal
+  },
+  methods: {
+    openEventModal () {
+      console.log('11111')
+      const myModal = document.getElementById('donateModal')
+      const ins = Modal.getOrCreateInstance(myModal)
+      this.isOpenModal = true
+      ins.show()
+    }
   }
 }
 </script>

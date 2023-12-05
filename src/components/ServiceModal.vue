@@ -1,7 +1,7 @@
 <template>
   <div
     class="modal fade"
-    id="donateModal"
+    id="serviceModal"
   >
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
@@ -9,7 +9,7 @@
           <h5
             class="modal-title H2_Heading H4_Heading_mo_2"
           >
-            小額捐款
+            服務信箱
           </h5>
           <button
             type="button"
@@ -28,16 +28,12 @@
                     <div class="row align-items-center">
                       <div class="col-8 col-md-12 px-0">
                         <div class="title H1_Heading H6_Heading_mo">
-                          您的小筆捐款<br>是每隻毛孩未來的大大動力！
-                        </div>
-                        <div class="subTitle">
-                          <div class="body small_mo">目前小額贊助總金額</div>
-                          <div class="H2_Heading H5_Heading_mo">987,655,873</div>
+                          分享您的想法<br>一同為我們的未來打造更美好！
                         </div>
                       </div>
                       <div class="col-4 col-md-12 px-0">
                         <div class="icon_area">
-                          <img src="@/assets/image/donate@2x.png" class="icon_img" alt="">
+                          <img src="@/assets/image/share.png" class="icon_img" alt="">
                         </div>
                       </div>
                     </div>
@@ -45,47 +41,47 @@
                 </div>
               </div>
               <div class="col-12 col-md-5 px-0 ps-md-3">
-                <template v-if="!isDonated">
-                  <div class="mb-3 H5_Heading">捐款方式</div>
-                  <div
-                    class="mb-3 donate_item d-flex flex-column flex-md-row justify-content-md-between align-items-md-center"
-                    :class="{'active' : item.active}"
-                    v-for="item in donateList"
-                    :key="item.id"
-                    @click="selectItem(item)"
-                  >
-                    <div class="item_name H5_Heading">{{ item.title }}</div>
-                    <div class="d-flex align-items-center">
-                      <div class="price body me-4">
-                        NT$ <span class="H4_Heading">{{ item.price }}</span>
-                      </div>
-                      <div class="donate_p small">
-                        已有 {{ item.NumberOfSponsors }} 人贊助
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mb-3 donate_item">
-                    <div class="mb-2 item_name H5_Heading">自助贊助金額</div>
+                <template v-if="!isServiced">
+                  <div class="mb-4">
+                    <div class="mb-2 H5_Heading">您的姓名</div>
                     <formInput
                       :is-input="true"
-                      :preText="'NT$'"
-                      :placeholder="'請輸入金額'"
-                      :use-function="true"
-                      @emitFunction="selectInput"
+                      :placeholder="'姓名'"
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <div class="mb-2 H5_Heading">Email</div>
+                    <formInput
+                      :is-input="true"
+                      :placeholder="'Email'"
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <div class="mb-2 H5_Heading">手機</div>
+                    <formInput
+                      :is-input="true"
+                      :placeholder="'手機號碼'"
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <div class="mb-2 H5_Heading">您的建言</div>
+                    <formInput
+                      :is-text-area="true"
+                      :placeholder="'您的建言'"
                     />
                   </div>
                   <div
                     class="donate_btn"
                     @click="donate()"
                   >
-                    前往捐款
+                    送出意見
                   </div>
                 </template>
                 <template v-else>
                   <div class="h-100 d-flex flex-column align-items-center justify-content-center">
-                    <div class="H3_Heading thank_title">感謝您的捐款</div>
+                    <div class="H3_Heading thank_title">感謝您的意見</div>
                     <img src="@/assets/image/check.svg" alt="" class="thank_img">
-                    <div class="thank_close" data-bs-dismiss="modal" @click="isDonated = false">關閉</div>
+                    <div class="thank_close" data-bs-dismiss="modal" @click="isServiced = false">關閉</div>
                   </div>
                 </template>
               </div>
@@ -105,7 +101,7 @@ export default {
   },
   data () {
     return {
-      isDonated: false,
+      isServiced: false,
       donateList: [
         {
           id: '01',
@@ -133,10 +129,10 @@ export default {
   },
   methods: {
     donate () {
-      this.isDonated = true
+      this.isServiced = true
     },
     closeModal () {
-      this.isDonated = false
+      this.isServiced = false
     },
     selectItem (item) {
       this.donateList.forEach(listItem => {
@@ -170,7 +166,7 @@ export default {
   }
 }
 .left_side {
-  padding: 60px;
+  padding: 60px 60px 0 60px;
   border-radius: 24px;
   background-color: $bg_color_theme_2;
   @include mobile {
@@ -185,40 +181,27 @@ export default {
   color: $text_primary-700;
 }
 .icon_area {
-  padding: 52px 0;
+  margin: 0 -60px;
   .icon_img {
-    width: 336px;
-    height: 348px;
+    width: 100%;
     display: block;
-    margin: 0 auto;
     @include mobile {
       width: 100%;
       height: auto;
     }
   }
   @include mobile {
-    padding: 0;
+    margin: 0 -16px 0 0;
   }
 }
-.donate_item {
-  border: 2px solid $text_primary-200;
-  border-radius: 16px;
-  padding: 27.5px 16px;
-  background-color: #fff;
-  cursor: pointer;
-  &.active {
-    border-color: $primary_theme_1;
-  }
+.service_input {
+  border-radius: 8px;
+  background-color: $text_primary-100;
+  padding: 16px;
 }
-.price {
-  color: $text_primary-700;
-}
-.item_name {
-  padding-left: 18px;
-  color: $primary_theme_1;
-}
-.donate_p {
-  color: $text_primary-500;
+.service_input_item {
+  background: transparent;
+  border: none;
 }
 .donate_btn {
   padding: 24px 0;

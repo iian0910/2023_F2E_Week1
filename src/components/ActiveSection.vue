@@ -10,7 +10,7 @@
               <div class="row align-items-center g-0">
                 <div
                   class="col-6"
-                  @click="openEventModal()"
+                  @click="openEventModal('donate')"
                 >
                   <GoToButton
                     :value="'小額捐款'"
@@ -29,7 +29,10 @@
             <div class="sub_title mb-4">親愛的鄉親，每一位市民的意見都是我們社區前進的原動力</div>
             <div class="container p-0">
               <div class="row align-items-center g-0">
-                <div class="col-6">
+                <div
+                  class="col-6"
+                  @click="openEventModal('service')"
+                >
                   <GoToButton
                     :value="'填寫表單'"
                   />
@@ -44,13 +47,15 @@
       </div>
     </div>
     <!-- Modal -->
-    <SectionModal />
+    <DonateModal />
+    <ServiceModal />
   </div>
 </template>
 
 <script>
 import GoToButton from '../components/GoToButton.vue'
-import SectionModal from './DonateModal.vue'
+import DonateModal from './DonateModal.vue'
+import ServiceModal from './ServiceModal.vue'
 import { Modal } from 'bootstrap'
 
 export default {
@@ -59,14 +64,18 @@ export default {
   },
   components: {
     GoToButton,
-    SectionModal
+    DonateModal,
+    ServiceModal
   },
   methods: {
-    openEventModal () {
-      console.log('11111')
-      const myModal = document.getElementById('donateModal')
+    openEventModal (target) {
+      let myModal = null
+      if (target === 'donate') {
+        myModal = document.getElementById('donateModal')
+      } else {
+        myModal = document.getElementById('serviceModal')
+      }
       const ins = Modal.getOrCreateInstance(myModal)
-      this.isOpenModal = true
       ins.show()
     }
   }

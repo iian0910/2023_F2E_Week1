@@ -9,14 +9,14 @@
             <div class="container p-0">
               <div class="row align-items-center g-0">
                 <div
-                  class="col-6"
+                  class="col-7"
                   @click="openEventModal('donate')"
                 >
                   <GoToButton
                     :value="'小額捐款'"
                   />
                 </div>
-                <div class="col-6">
+                <div class="col-5">
                   <div class="active_img hand"></div>
                 </div>
               </div>
@@ -30,14 +30,14 @@
             <div class="container p-0">
               <div class="row align-items-center g-0">
                 <div
-                  class="col-6"
+                  class="col-7"
                   @click="openEventModal('service')"
                 >
                   <GoToButton
                     :value="'填寫表單'"
                   />
                 </div>
-                <div class="col-6">
+                <div class="col-5">
                   <div class="active_img mail"></div>
                 </div>
               </div>

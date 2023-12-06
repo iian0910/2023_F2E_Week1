@@ -9,6 +9,7 @@
 ```
 Vue2.js
 Bootstrap 5
+wow.js
 ```
 
 ### 設計 UI 線稿出處

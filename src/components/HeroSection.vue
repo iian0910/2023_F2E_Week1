@@ -17,10 +17,18 @@
         </div>
       </div>
       <img src="@/assets/image/hero_all.png" class="d-block hero_img" alt="">
-      <div class="slogan">
-        <span class="me-2 me-md-4">為喵星人，護台灣！</span>
-        <span class="me-2 me-md-4">從喵的眼中，看見台灣</span>
-        <span>喵的未來，人的希望</span>
+      <div class="scroll_slogan d-flex">
+        <!-- 本尊 -->
+        <div class="slogan">
+          <span class="me-2 me-md-4">為喵星人，護台灣！</span>
+          <span class="me-2 me-md-4">從喵的眼中，看見台灣</span>
+          <span>喵的未來，人的希望</span>
+        </div>
+        <div class="slogan">
+          <span class="me-2 me-md-4">為喵星人，護台灣！</span>
+          <span class="me-2 me-md-4">從喵的眼中，看見台灣</span>
+          <span>喵的未來，人的希望</span>
+        </div>
       </div>
     </div>
   </div>
@@ -96,11 +104,14 @@ export default {
     max-width: 343px;
   }
 }
-.slogan {
+.scroll_slogan {
   padding: 10px 0;
   background-color: $primary_theme_1;
   overflow: hidden;
+}
+.slogan {
   white-space:nowrap;
+  animation: scroll 40s linear infinite;
   span {
     font-family: Mantou;
     font-size: 64px;
@@ -112,6 +123,27 @@ export default {
       font-size: 40px;
       line-height: 42px;
     }
+  }
+  &:nth-child(2) {
+    animation: scroll2 40s linear infinite;
+    animation-delay: -20s;
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(100%)
+  }
+  to {
+    transform: translateX(-100%)
+  }
+}
+@keyframes scroll2 {
+  from {
+    transform: translateX(0%)
+  }
+  to {
+    transform: translateX(-200%)
   }
 }
 </style>

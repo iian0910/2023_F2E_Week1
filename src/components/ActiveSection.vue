@@ -23,7 +23,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 wow bounceInRight">
+        <div class="col-12 col-md-6 wow bounceInRight" data-wow-delay="0.3s">
           <div class="box service">
             <div class="title large_text mb-3">民眾服務信箱</div>
             <div class="sub_title mb-4">親愛的鄉親，每一位市民的意見都是我們社區前進的原動力</div>

@@ -2,7 +2,7 @@
   <div class="section_padding">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-6 mb-3 mb-lg-0">
+        <div class="col-12 col-md-6 mb-3 mb-lg-0 wow bounceInLeft">
           <div class="box donate">
             <div class="title large_text mb-3">小額支持喵喵</div>
             <div class="sub_title mb-4">您的小筆捐款，是每隻毛孩未來的大大動力！</div>
@@ -23,7 +23,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 wow bounceInRight">
           <div class="box service">
             <div class="title large_text mb-3">民眾服務信箱</div>
             <div class="sub_title mb-4">親愛的鄉親，每一位市民的意見都是我們社區前進的原動力</div>
@@ -57,6 +57,7 @@ import GoToButton from '../components/GoToButton.vue'
 import DonateModal from './DonateModal.vue'
 import ServiceModal from './ServiceModal.vue'
 import { Modal } from 'bootstrap'
+import { WOW } from 'wowjs'
 
 export default {
   data () {
@@ -66,6 +67,11 @@ export default {
     GoToButton,
     DonateModal,
     ServiceModal
+  },
+  mounted () {
+    this.$nextTick(() => {
+      new WOW().init()
+    })
   },
   methods: {
     openEventModal (target) {

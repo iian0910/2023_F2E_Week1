@@ -1,10 +1,12 @@
 <template>
   <div class="section_padding end_section">
-    <div class="title mb-4 mb-md-3 d-flex flex-wrap justify-content-center">
+    <div
+      class="title mb-4 mb-md-3 d-flex flex-wrap justify-content-center wow bounceInDown"
+    >
       <p class="mb-0 me-md-3">台灣的明天</p>
       <p class="mb-0">喵先鋪路</p>
     </div>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center wow bounceInUp">
       <div class="person d-flex align-items-center">
         <span class="no_ball me-3">3</span>
         <h1 class="person_name H1_Heading H4_Heading_mo_2">喵立翰 Miao Li-Han</h1>
@@ -14,11 +16,13 @@
 </template>
 
 <script>
+import { WOW } from 'wowjs'
+
 export default {
-  data () {
-    return {}
-  },
-  components: {
+  mounted () {
+    this.$nextTick(() => {
+      new WOW().init()
+    })
   }
 }
 </script>

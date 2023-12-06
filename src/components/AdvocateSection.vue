@@ -1,7 +1,7 @@
 <template>
   <div class="section_padding section_bg">
     <div class="container">
-      <div class="card">
+      <div class="card wow bounceInUp">
         <div class="row">
           <div class="col-12 col-md-6">
             <div class="card-body">
@@ -26,6 +26,7 @@
 
 <script>
 import SectionTitle from './SectionTitle.vue'
+import { WOW } from 'wowjs'
 
 export default {
   data () {
@@ -33,6 +34,11 @@ export default {
   },
   components: {
     SectionTitle
+  },
+  mounted () {
+    this.$nextTick(() => {
+      new WOW().init()
+    })
   }
 }
 </script>

@@ -1,11 +1,15 @@
 <template>
   <div>
     <div class="title_block">
-      <div class="title mb-3 d-flex flex-wrap justify-content-center">
+      <div
+        class="title mb-3 d-flex flex-wrap justify-content-center wow bounceInDown"
+      >
         <p class="me-md-3">台灣的明天</p>
         <p>喵先鋪路</p>
       </div>
-      <div class="subTitle d-flex flex-wrap justify-content-center align-items-center mb-4">
+      <div
+        class="subTitle d-flex flex-wrap justify-content-center align-items-center mb-4 wow bounceInDown"
+      >
         <InfoTag
           class="me-3"
           :value="'2024 立委參選人'"
@@ -16,7 +20,10 @@
           <h1 class="person_name H1_Heading H3_Heading_mo_2">喵立翰 Miao Li-Han</h1>
         </div>
       </div>
-      <img src="@/assets/image/hero_all.png" class="d-block hero_img" alt="">
+      <img
+        src="@/assets/image/hero_all.png"
+        class="d-block hero_img wow bounceInUp"
+      >
       <div class="scroll_slogan d-flex">
         <!-- 本尊 -->
         <div class="slogan">
@@ -36,9 +43,16 @@
 
 <script>
 import InfoTag from './InfoTag.vue'
+import { WOW } from 'wowjs'
+
 export default {
   components: {
     InfoTag
+  },
+  mounted () {
+    this.$nextTick(() => {
+      new WOW().init()
+    })
   }
 }
 </script>

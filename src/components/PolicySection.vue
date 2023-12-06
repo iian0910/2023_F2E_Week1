@@ -1,7 +1,7 @@
 <template>
   <div class="section_padding section_bg">
-    <SectionTitle :tagVal="'POLICY ISSUES'" :value="'政策議題'"/>
-    <div class="container">
+    <SectionTitle class="wow bounceInDown" :tagVal="'POLICY ISSUES'" :value="'政策議題'"/>
+    <div class="container wow bounceInUp" data-wow-delay="0.3s">
       <div class="row">
         <div
           v-for="item in policyList"
@@ -31,6 +31,7 @@ import { Modal } from 'bootstrap'
 import carousel1 from '@/assets/image/carousel-1@2x.png'
 import carousel2 from '@/assets/image/carousel-2@2x.png'
 import carousel3 from '@/assets/image/carousel-3@2x.png'
+import { WOW } from 'wowjs'
 
 export default {
   data () {
@@ -63,6 +64,11 @@ export default {
   components: {
     SectionTitle,
     SectionModal
+  },
+  mounted () {
+    this.$nextTick(() => {
+      new WOW().init()
+    })
   },
   methods: {
     openEventModal (item) {

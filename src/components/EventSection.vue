@@ -1,8 +1,8 @@
 <template>
   <div class="section_padding">
     <div class="container">
-      <SectionTitle :tagVal="'LATEST EVENTS'" :value="'最新活動'"/>
-      <div class="row">
+      <SectionTitle class="wow bounceInDown" :tagVal="'LATEST EVENTS'" :value="'最新活動'"/>
+      <div class="row wow bounceInUp" data-wow-delay="0.3s">
         <div
           class="main_event col-12 col-md-6 mb-4 mb-md-0"
           @click="openEventModal(eventList[0])"
@@ -64,6 +64,7 @@ import { Modal } from 'bootstrap'
 import event01 from '@/assets/image/event01.png'
 import event02 from '@/assets/image/event02.png'
 import event03 from '@/assets/image/event03.png'
+import { WOW } from 'wowjs'
 
 export default {
   data () {
@@ -106,7 +107,11 @@ export default {
     GoToButton,
     SectionModal
   },
-  mounted () {},
+  mounted () {
+    this.$nextTick(() => {
+      new WOW().init()
+    })
+  },
   computed: {
     otherEvent () {
       const result = this.eventList.filter((item, index) => {
